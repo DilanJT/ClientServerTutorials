@@ -7,6 +7,9 @@
 //This acts as a client
 package tutorialone;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author DELL
@@ -24,8 +27,10 @@ public class TutorialOne {
     }
     
     private void execute() {
-//        throw new UnsupportedOperationException("Not supported yet.");
-        System.out.println(server.testConnection("001"));
+        DateTimeFormatter dateTimeFormat = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        
+        System.out.println(server.testConnection("001", dateTimeFormat.format(now) ));
     }
     
     //TODO put the time stamps

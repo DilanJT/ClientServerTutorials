@@ -18,8 +18,8 @@ public class DummyServer {
     }
 
     //this function is mandatory => to debug
-    String testConnection(String id) {
+    String testConnection(String id, String timeStamp) {
         System.out.println("DummyServer. Connection being started...");
-        return "Server "+ this.serverName+": Connection from client:"+ id +" succeded";
+        return timeStamp + " - Server "+ this.serverName+": Connection from client:"+ id +" succeded";
     }
 }
