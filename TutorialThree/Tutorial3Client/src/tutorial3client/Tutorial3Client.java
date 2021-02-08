@@ -16,6 +16,18 @@ public class Tutorial3Client {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Tutorial3Client client = new Tutorial3Client();
+        client.execute();
     }
     
+    private void execute() {
+        System.out.println("[CLIENT] - Starting test...");
+        System.out.println("[CLIENT] - Test Completed !");
+    }
+
+    private static Boolean isConnected() {
+        tutorial3client.SmipleWebService_Service service = new tutorial3client.SmipleWebService_Service();
+        tutorial3client.SmipleWebService port = service.getSmipleWebServicePort();
+        return port.isConnected();
+    }
 }
