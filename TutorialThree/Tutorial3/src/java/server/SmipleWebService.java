@@ -34,4 +34,13 @@ public class SmipleWebService {
         System.out.println("[SERVER] - Testing Connection");
         return true;
     }
+    
+    private void executeTest(){
+        System.out.println("[CLIENT] - Executing Connection test");
+        if(isConnected()){
+            System.out.println("[CLIENT] - Server is connected, test can continue...");
+        }else{
+            System.out.println("[CLIENT] - Server is not connected, test has failed !");
+        }
+    }
 }

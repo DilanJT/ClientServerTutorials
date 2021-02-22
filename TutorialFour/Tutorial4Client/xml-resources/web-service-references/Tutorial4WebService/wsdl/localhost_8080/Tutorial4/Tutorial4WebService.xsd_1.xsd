@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="add" type="tns:add"/>
+
+<xs:element name="addResponse" type="tns:addResponse"/>
+
+<xs:element name="addWithException" type="tns:addWithException"/>
+
+<xs:element name="addWithExceptionResponse" type="tns:addWithExceptionResponse"/>
+
+<xs:element name="divide" type="tns:divide"/>
+
+<xs:element name="divideResponse" type="tns:divideResponse"/>
+
+<xs:element name="divideWithException" type="tns:divideWithException"/>
+
+<xs:element name="divideWithExceptionResponse" type="tns:divideWithExceptionResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:element name="multiply" type="tns:multiply"/>
+
+<xs:element name="multiplyResponse" type="tns:multiplyResponse"/>
+
+<xs:element name="multiplyWithException" type="tns:multiplyWithException"/>
+
+<xs:element name="multiplyWithExceptionResponse" type="tns:multiplyWithExceptionResponse"/>
+
+<xs:element name="substract" type="tns:substract"/>
+
+<xs:element name="substractResponse" type="tns:substractResponse"/>
+
+<xs:element name="substractWithException" type="tns:substractWithException"/>
+
+<xs:element name="substractWithExceptionResponse" type="tns:substractWithExceptionResponse"/>
+
+<xs:complexType name="divideWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="divideWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiplyWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiplyWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="add">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="substract">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="substractResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiply">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="multiplyResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="substractWithException">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="substractWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="divide">
+<xs:sequence>
+<xs:element name="a" type="xs:double" minOccurs="0"/>
+<xs:element name="b" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="divideResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

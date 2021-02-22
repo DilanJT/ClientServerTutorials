@@ -30,4 +30,10 @@ public class Tutorial3Client {
         tutorial3client.SmipleWebService port = service.getSmipleWebServicePort();
         return port.isConnected();
     }
+
+    private static String hello(java.lang.String name) {
+        tutorial3client.SmipleWebService_Service service = new tutorial3client.SmipleWebService_Service();
+        tutorial3client.SmipleWebService port = service.getSmipleWebServicePort();
+        return port.hello(name);
+    }
 }
