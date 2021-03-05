@@ -39,6 +39,7 @@ public class Tutorial5Client {
                 System.out.println("[CLIENT] - Server has " + getNumberOfSamples() + " samples");
                 System.out.println("[CLIENT] - Maximum sample on the server is " + getMaximum());
                 System.out.println("[CLIENT] - Minimum sample on the server is " + getMinimum());
+                System.out.println("[CLIENT] - Averaga samples on the server is " + getAverage());
             }catch (Exception_Exception ex) {
                 Logger.getLogger(Tutorial5Client.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -48,6 +49,7 @@ public class Tutorial5Client {
                 System.out.println("[CLIENT] - Server has " + getNumberOfSamples() + " samples");
                 System.out.println("[CLIENT] - Maximum sample on the server is " + getMaximum());
                 System.out.println("[CLIENT] - Minimum sample on the server is " + getMinimum());
+                System.out.println("[CLIENT] - Averaga samples on the server is " + getAverage());
             }catch (Exception_Exception ex) {
                 Logger.getLogger(Tutorial5Client.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -55,8 +57,9 @@ public class Tutorial5Client {
             try{
                 addSample(s);
                 System.out.println("[CLIENT] - Server has " + getNumberOfSamples() + " samples");
-                System.out.println("[CLIENT] - Maximum sample on the server is " + getMaximum().toString());
-                System.out.println("[CLIENT] - Minimum sample on the server is " + getMinimum().toString());
+                System.out.println("[CLIENT] - Maximum sample on the server is " + getMaximum());
+                System.out.println("[CLIENT] - Minimum sample on the server is " + getMinimum());
+                System.out.println("[CLIENT] - Averaga samples on the server is " + getAverage());
             }catch (Exception_Exception ex) {
                 Logger.getLogger(Tutorial5Client.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -98,6 +101,12 @@ public class Tutorial5Client {
         server.Tutorial5WebService_Service service = new server.Tutorial5WebService_Service();
         server.Tutorial5WebService port = service.getTutorial5WebServicePort();
         return port.getMinimum();
+    }
+
+    private static Double getAverage() throws Exception_Exception {
+        server.Tutorial5WebService_Service service = new server.Tutorial5WebService_Service();
+        server.Tutorial5WebService port = service.getTutorial5WebServicePort();
+        return port.getAverage();
     }
     
     

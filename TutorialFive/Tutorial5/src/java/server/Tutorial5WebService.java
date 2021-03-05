@@ -104,4 +104,24 @@ public class Tutorial5WebService {
         
         return min;
     }
+    
+    /**
+     * Web service operation
+     * @return 
+     */
+    @WebMethod(operationName = "getAverage")
+    public Double getAverage() throws Exception{
+        if(samples.isEmpty())
+            throw new Exception();
+        double total = 0;
+        for(int i = 0; i < samples.size(); i++){
+            total += samples.get(i).getValue();
+        }
+        double average = total / samples.size();
+        
+        Double avgObject = new Double(average);
+        return avgObject;
+        
+    }
+    
 }

@@ -23,6 +23,6 @@ public class TemparatureSample {
     
     @Override
     public String toString(){
-        return "TemperatureSample{" + "value=" + value + "}";
+        return java.time.LocalTime.now() + " TemperatureSample{" + "value=" + value + "}";
     }
 }

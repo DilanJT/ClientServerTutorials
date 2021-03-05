@@ -43,6 +43,12 @@
 <message name="addSampleResponse">
 <part name="parameters" element="tns:addSampleResponse"/>
 </message>
+<message name="getAverage">
+<part name="parameters" element="tns:getAverage"/>
+</message>
+<message name="getAverageResponse">
+<part name="parameters" element="tns:getAverageResponse"/>
+</message>
 <portType name="Tutorial5WebService">
 <operation name="getNumberOfSamples">
 <input wsam:Action="http://server/Tutorial5WebService/getNumberOfSamplesRequest" message="tns:getNumberOfSamples"/>
@@ -70,6 +76,11 @@
 <input wsam:Action="http://server/Tutorial5WebService/addSampleRequest" message="tns:addSample"/>
 <output wsam:Action="http://server/Tutorial5WebService/addSampleResponse" message="tns:addSampleResponse"/>
 <fault message="tns:Exception" name="Exception" wsam:Action="http://server/Tutorial5WebService/addSample/Fault/Exception"/>
+</operation>
+<operation name="getAverage">
+<input wsam:Action="http://server/Tutorial5WebService/getAverageRequest" message="tns:getAverage"/>
+<output wsam:Action="http://server/Tutorial5WebService/getAverageResponse" message="tns:getAverageResponse"/>
+<fault message="tns:Exception" name="Exception" wsam:Action="http://server/Tutorial5WebService/getAverage/Fault/Exception"/>
 </operation>
 </portType>
 <binding name="Tutorial5WebServicePortBinding" type="tns:Tutorial5WebService">
@@ -126,6 +137,18 @@
 </output>
 </operation>
 <operation name="addSample">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="Exception">
+<soap:fault name="Exception" use="literal"/>
+</fault>
+</operation>
+<operation name="getAverage">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

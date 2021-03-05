@@ -6,6 +6,10 @@
 
 <xs:element name="addSampleResponse" type="tns:addSampleResponse"/>
 
+<xs:element name="getAverage" type="tns:getAverage"/>
+
+<xs:element name="getAverageResponse" type="tns:getAverageResponse"/>
+
 <xs:element name="getMaximum" type="tns:getMaximum"/>
 
 <xs:element name="getMaximumResponse" type="tns:getMaximumResponse"/>
@@ -99,6 +103,16 @@
 <xs:complexType name="getMaximumResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:temparatureSample" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAverage">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAverageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>
